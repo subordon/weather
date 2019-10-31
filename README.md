@@ -1,17 +1,46 @@
 <h1 align="center"> weather </h1>
 
-<p align="center"> a weather sdk.</p>
+<p align="center">:rainbow: a weather sdk.</p>
 
+[![Build Status](https://travis-ci.org/subordon/weather.svg?branch=master)](https://travis-ci.org/subordon/weather)
 
-## Installing
+## 安装
 
 ```shell
 $ composer require bordon/weather -vvv
 ```
 
-## Usage
+## 使用
 
-TODO
+```php
+use Bordon\Weather\Weather;
+
+$key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
+
+$weather = new Weather($key);
+```
+
+## 获取实时天气
+
+```php
+$response = $weather->getLiveWeather('深圳');
+```
+
+## 获取预报天气
+
+```php
+$response = $weather->getForecastWeather('深圳');
+```
+## 设置返回格式
+
+返回值类型，可选 json 与 xml，默认 json；
+```php
+$response = $weather->getLiveWeather('深圳', 'xml');
+```
+
+## 参考
+
+- [高德开放平台天气接口](https://lbs.amap.com/api/webservice/guide/api/weatherinfo/)
 
 ## Contributing
 
