@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1.0",
         "guzzlehttp/guzzle": "^6.4",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "~5"
